@@ -4,34 +4,31 @@ math.randomseed(os.time())
 
 -- Some preset fake code snippets
 local codeSnippets = {
-    "local var = 10",
-    "function startProgram()",
-    "for i = 1, 100 do",
-    "if condition then",
-    "local result = computeValue()",
-    "print('Startup successful')",
-    "end",
-    "os.execute('sleep 1')",
-    "while true do",
-    "local data = fetchData()",
-    "return outputValue",
-    "end"
+    'print("Initializing system...")',
+    'local var = 10',
+    'function startProgram()',
+    'for i = 1, 100 do',
+    'if condition then',
+    'local result = computeValue()',
+    'print("Startup successful")',
+    'end',
+    'os.execute("sleep 1")',
+    'while true do',
+    'local data = fetchData()',
+    'return outputValue',
+    'end'
 }
 
 -- Require socket for sleep function (cross-platform)
 local socket = require("socket")
 
--- Generate a random fake code line
-function generateFakeCode()
-    return codeSnippets[math.random(1, #codeSnippets)]
-end
-
 -- Cool startup simulation
 function coolStartup()
     for i = 1, 50 do
-        local fakeCode = generateFakeCode()
-        print(fakeCode)
-        socket.sleep(0.1)  -- Adds a delay to simulate the startup process
+        -- Pick a random code line
+        local fakeCode = codeSnippets[math.random(1, #codeSnippets)]
+        print(fakeCode)  -- Simulates writing fake code to the console
+        socket.sleep(0.1)  -- Adds a small delay to make it look cooler
     end
     print("Startup Complete!")
 end
