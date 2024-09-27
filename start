@@ -1,7 +1,3 @@
--- Fake Code for Cool Startup
-
--- Cool startup simulation with print statements only
-function coolStartup()
     print("Starting the system...")
     socket.sleep(0.1)
     
@@ -49,8 +45,3 @@ function coolStartup()
     
     print("Finalizing startup...")
     socket.sleep(0.1)
-    
-    print("System startup complete!")
-end
-
-coolStartup()
