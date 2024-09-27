@@ -18,6 +18,9 @@ local codeSnippets = {
     "end"
 }
 
+-- Require socket for sleep function (cross-platform)
+local socket = require("socket")
+
 -- Generate a random fake code line
 function generateFakeCode()
     return codeSnippets[math.random(1, #codeSnippets)]
@@ -28,7 +31,7 @@ function coolStartup()
     for i = 1, 50 do
         local fakeCode = generateFakeCode()
         print(fakeCode)
-        os.execute("sleep 0.1")  -- Adds a delay to simulate the startup process
+        socket.sleep(0.1)  -- Adds a delay to simulate the startup process
     end
     print("Startup Complete!")
 end
