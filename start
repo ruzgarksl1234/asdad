@@ -1,36 +1,56 @@
 -- Fake Code for Cool Startup
 
-math.randomseed(os.time())
-
--- Some preset fake code snippets
-local codeSnippets = {
-    'print("Initializing system...")',
-    'local var = 10',
-    'function startProgram()',
-    'for i = 1, 100 do',
-    'if condition then',
-    'local result = computeValue()',
-    'print("Startup successful")',
-    'end',
-    'os.execute("sleep 1")',
-    'while true do',
-    'local data = fetchData()',
-    'return outputValue',
-    'end'
-}
-
--- Require socket for sleep function (cross-platform)
-local socket = require("socket")
-
--- Cool startup simulation
+-- Cool startup simulation with print statements only
 function coolStartup()
-    for i = 1, 50 do
-        -- Pick a random code line
-        local fakeCode = codeSnippets[math.random(1, #codeSnippets)]
-        print(fakeCode)  -- Simulates writing fake code to the console
-        socket.sleep(0.1)  -- Adds a small delay to make it look cooler
-    end
-    print("Startup Complete!")
+    print("Starting the system...")
+    socket.sleep(0.1)
+    
+    print("Initializing core components...")
+    socket.sleep(0.1)
+    
+    print("Loading module: core")
+    socket.sleep(0.1)
+    
+    print("Loading module: network")
+    socket.sleep(0.1)
+    
+    print("Loading module: GUI")
+    socket.sleep(0.1)
+    
+    print("Loading module: database")
+    socket.sleep(0.1)
+    
+    print("Modules loaded successfully.")
+    socket.sleep(0.1)
+    
+    print("Setting up configuration...")
+    socket.sleep(0.1)
+    
+    print("Configuration: Network = enabled")
+    socket.sleep(0.1)
+    
+    print("Configuration: Graphics = high")
+    socket.sleep(0.1)
+    
+    print("Configuration: Debug mode = false")
+    socket.sleep(0.1)
+    
+    print("Running diagnostics...")
+    socket.sleep(0.1)
+    
+    print("Diagnostics: CPU = OK")
+    socket.sleep(0.1)
+    
+    print("Diagnostics: Memory = OK")
+    socket.sleep(0.1)
+    
+    print("Diagnostics: Disk = OK")
+    socket.sleep(0.1)
+    
+    print("Finalizing startup...")
+    socket.sleep(0.1)
+    
+    print("System startup complete!")
 end
 
 coolStartup()
